@@ -82,8 +82,8 @@ def create_app(test_config=None):
             if error is None:
                 session.clear()
                 session['user_id'] = user.id
-                return redirect(url_for('index'))
-                #return redirect('/notes')
+                return redirect(url_for('note_index'))
+                #return redirect('index')
 
             flash(error, category='error')
         return render_template('log_in.html')
@@ -96,7 +96,8 @@ def create_app(test_config=None):
 
     @app.route('/')
     def index():
-        return 'Index'
+        #return 'Index'
+        return redirect(url_for('log_in'))
 
     @app.route('/notes')
     @require_login
