@@ -8,4 +8,4 @@ db_password = os.environ.get('DB_PASSWORD', default='db_password')
 
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 #SQLALCHEMY_DATABASE_URI = f"postgres://{db_user}:{db_password}@{db_host}:5432/{db_name}"
-SQLALCHEMY_DATABASE_URI = f"postgres://{db_user}:{db_password}@{db_host}:/{db_name}"
+SQLALCHEMY_DATABASE_URI = f"postgres://{db_user}:{db_password}@{db_host}/{db_name}"
